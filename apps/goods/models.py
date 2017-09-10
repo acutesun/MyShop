@@ -44,7 +44,7 @@ class GoodsBrand(models.Model):
 class Goods(models.Model):
     category = models.ForeignKey(GoodsCategory, verbose_name="商品类目")
     name = models.CharField(max_length=50, verbose_name='商品名称')
-    goods_sn = models.CharField(max_length=30, default='', unique=True, verbose_name='商品货号')
+    goods_sn = models.CharField(max_length=30, default='', verbose_name='商品货号')
     click_num = models.IntegerField(default=0, verbose_name="点击数")
     sold_num = models.IntegerField(default=0, verbose_name="商品销售量")
     fav_num = models.IntegerField(default=0, verbose_name="收藏数")
